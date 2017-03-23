@@ -9,7 +9,6 @@
   },
   "author": "Lemichel",
   "license": "ISC",
-
   "dependencies": {
     "bcrypt": "*",
     "express": "*",
