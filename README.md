@@ -4,6 +4,7 @@ TODO: Write a project description
 Git clone https://github.com/PiLemichel/NodeApi-mySql-Starter.git
 
 cd NodeApi-mySql-Starter
+
 npm install
 ## Usage
 node server.js
