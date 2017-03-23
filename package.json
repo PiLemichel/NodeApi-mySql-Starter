@@ -1,0 +1,20 @@
+{
+  "name": "apistarter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "REST.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Lemichel",
+  "license": "ISC",
+
+  "dependencies": {
+    "bcrypt": "*",
+    "express": "*",
+    "morgan": "*",
+    "body-parser": "*",
+    "mysql": "*"
+  }
+}
