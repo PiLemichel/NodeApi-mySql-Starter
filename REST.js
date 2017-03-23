@@ -27,8 +27,8 @@ router.get("/users", function(req,res){
 });
 
 router.post("/users",function(req,res){
-    var query = "INSERT INTO ?? (??,??,??,??,??,??) VALUES (?,?,?,?,?,?)";
-    var table = ["users","id_groups","email","password","lastname","firstname","isActive",req.body.id_groups,req.body.email, req.body.password,req.body.lastname,req.body.firstname,req.body.isActive];
+    var query = "INSERT INTO ?? (??,??,??,??) VALUES (?,?,?,?)";
+    var table = ["users","email","password","lastname","firstname",req.body.email, req.body.password,req.body.lastname,req.body.firstname];
     query = mysql.format(query,table);
     connection.query(query,function(err,rows){
         if(err) {
@@ -53,8 +53,8 @@ router.get("/protected/users/:id",function(req,res){
 });
 
 router.put("/users/:id",function(req,res){
-    var query = "UPDATE users SET id_groups = ?,email = ?, lastname = ?, firstname = ?, isActive = ?  WHERE id = ?";
-    var table = [req.body.id_groups, req.body.email,req.body.lastname,req.body.firstname,req.body.isActive, req.params.id];
+    var query = "UPDATE users SET email = ?, lastname = ?, firstname = ?  WHERE id = ?";
+    var table = [req.body.email,req.body.lastname,req.body.firstname, req.params.id];
 
     query = mysql.format(query,table);
     connection.query(query,function(err,rows){
